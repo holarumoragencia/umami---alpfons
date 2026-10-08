@@ -1,8 +1,3 @@
-import "@fontsource/inter/400.css";
-import "@fontsource/inter/500.css";
-import "@fontsource/inter/600.css";
-import "@fontsource/inter/700.css";
-import "@fontsource/jetbrains-mono/500.css";
 
 export const FPS = 30;
 export const DURATION = 15 * FPS;
@@ -16,8 +11,8 @@ export const COLORS = {
   brandSoft: "#eef1e6",
 };
 
-export const FONT = "Inter, sans-serif";
-export const MONO = "'JetBrains Mono', monospace";
+// Arial; Liberation Sans es métricamente idéntica (respaldo en Linux)
+export const FONT = "Arial, 'Liberation Sans', Helvetica, sans-serif";
 
 // Bloques de la animación (en frames)
 export const SCENES = {

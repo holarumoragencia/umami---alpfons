@@ -9,7 +9,7 @@ import {
   staticFile,
   useCurrentFrame,
 } from "remotion";
-import { COLORS, DURATION, FONT, MONO, SCENES } from "./theme";
+import { COLORS, DURATION, FONT, SCENES } from "./theme";
 
 const EASE = Easing.bezier(0.16, 1, 0.3, 1);
 
@@ -33,7 +33,7 @@ const WordReveal: React.FC<{
   delay?: number;
   size: number;
   weight?: number;
-}> = ({ lines, delay = 0, size, weight = 600 }) => {
+}> = ({ lines, delay = 0, size, weight = 700 }) => {
   const frame = useCurrentFrame();
   let i = 0;
   return (
@@ -43,7 +43,7 @@ const WordReveal: React.FC<{
         fontSize: size,
         fontWeight: weight,
         lineHeight: 1.08,
-        letterSpacing: "-0.025em",
+        letterSpacing: "-0.01em",
         color: COLORS.ink,
       }}
     >
@@ -188,7 +188,8 @@ const BarRows: React.FC<{
           position: "absolute",
           left: mediaX - 8,
           top: 0,
-          fontFamily: MONO,
+          fontFamily: FONT,
+          fontWeight: 700,
           fontSize: 17,
           letterSpacing: "0.08em",
           color: COLORS.muted,
@@ -219,15 +220,16 @@ const BarRows: React.FC<{
                 alignItems: "baseline",
                 gap: 16,
                 fontSize: ranked ? 32 : 36,
-                fontWeight: 500,
+                fontWeight: 400,
                 color: COLORS.ink,
-                letterSpacing: "-0.015em",
+                letterSpacing: "0",
               }}
             >
               {ranked ? (
                 <span
                   style={{
-                    fontFamily: MONO,
+                    fontFamily: FONT,
+          fontWeight: 700,
                     fontSize: 18,
                     color: COLORS.brand,
                     width: 30,
@@ -292,7 +294,7 @@ const Intro: React.FC = () => {
               fontFamily: FONT,
               fontSize: 210,
               fontWeight: 700,
-              letterSpacing: "-0.05em",
+              letterSpacing: "-0.02em",
               lineHeight: 1,
               color: COLORS.ink,
               fontVariantNumeric: "tabular-nums",
@@ -302,7 +304,8 @@ const Intro: React.FC = () => {
           </div>
           <div
             style={{
-              fontFamily: MONO,
+              fontFamily: FONT,
+          fontWeight: 700,
               fontSize: 20,
               letterSpacing: "0.14em",
               color: COLORS.muted,
@@ -322,7 +325,7 @@ const Intro: React.FC = () => {
               color: COLORS.ink,
               fontFamily: FONT,
               fontSize: 30,
-              fontWeight: 500,
+              fontWeight: 400,
               padding: "14px 24px",
               borderRadius: 999,
             }}
@@ -425,20 +428,13 @@ const TopBar: React.FC = () => {
           alignItems: "center",
           gap: 22,
           opacity: p,
-          fontFamily: MONO,
+          fontFamily: FONT,
+          fontWeight: 700,
           fontSize: 19,
           letterSpacing: "0.2em",
           color: COLORS.ink,
         }}
       >
-        <span
-          style={{
-            width: 10,
-            height: 10,
-            borderRadius: 99,
-            background: COLORS.brand,
-          }}
-        />
         RESTAURACIÓN · PRECIOS DE VERANO
         <div style={{ display: "flex", gap: 6, marginLeft: 8 }}>
           {scenes.map((s, i) => {
@@ -487,7 +483,7 @@ const TopBar: React.FC = () => {
           <div
             style={{
               fontSize: 22,
-              fontWeight: 600,
+              fontWeight: 700,
               color: COLORS.ink,
               letterSpacing: "-0.01em",
             }}
@@ -540,14 +536,6 @@ const VideoBand: React.FC = () => {
           transform: `translateY(-52%) scale(${zoom})`,
         }}
       />
-      {/* Fundido a blanco hacia el bloque de texto */}
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          background: `linear-gradient(180deg, ${COLORS.bg} 0%, rgba(255,255,255,0.55) 14%, rgba(255,255,255,0) 34%)`,
-        }}
-      />
     </div>
   );
 };
@@ -589,8 +577,8 @@ const EndCard: React.FC = () => {
           style={{
             marginTop: 34,
             fontSize: 52,
-            fontWeight: 600,
-            letterSpacing: "-0.025em",
+            fontWeight: 700,
+            letterSpacing: "-0.01em",
             color: COLORS.ink,
           }}
         >
@@ -607,7 +595,8 @@ const EndCard: React.FC = () => {
         />
         <div
           style={{
-            fontFamily: MONO,
+            fontFamily: FONT,
+          fontWeight: 700,
             fontSize: 20,
             letterSpacing: "0.14em",
             color: COLORS.muted,

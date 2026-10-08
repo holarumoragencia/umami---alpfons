@@ -13,8 +13,8 @@ para acompañar un post de LinkedIn de Alfonso Mas.
 | 10,7–13 s | Conclusión: "Menos subida en bloque. Más precio selectivo." |
 | 13–15 s | Cierre con foto, nombre y cargo |
 
-Marca personal sutil arriba a la derecha durante todo el video. Video de café en la franja inferior.
-Colores: fondo `#ffffff`, texto `#2a2a2a`, acento `#75864A`.
+Marca personal sutil arriba a la derecha durante todo el video. Video de café en la franja inferior, con corte limpio (sin difuminado).
+Tipografía: Arial. Colores: fondo `#ffffff`, texto `#2a2a2a`, acento `#75864A`.
 
 ## Uso
 
