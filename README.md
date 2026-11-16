@@ -27,3 +27,14 @@ npm run render   # genera out/precios-restauracion.mp4
 - Textos, datos y tiempos: `src/PreciosRestauracion.tsx` y `src/theme.ts` (`SCENES`).
 - Assets: `public/cafe.mp4` (clip reescalado a 1080p) y `public/alfonso.jpg` (avatar recortado).
 - Si Remotion no puede descargar su Chromium, pasá uno local con `--browser-executable=<ruta>`.
+
+---
+
+# Reel Umami · «Si mañana vendieras un 20 % más» (u1124)
+
+Composición `Capacidad20` (`src/Capacidad.tsx`): 1080×1350 (4:5), 30 fps, 33,6 s. Manrope + paleta Umami
+(naranja #F99F1A, gris #2A2A2A, oliva #75864A, arena #E9DFC9). Música: `public/capacidad/musica/2-product-launch.mp3`
+(150 BPM; cortes sobre la grilla de 12 frames).
+
+- Clips recortados a 4:5 en `public/capacidad/clips/` (originales en `stock-raw/`).
+- Render: `npm run render:capacidad` → `out/umami-capacidad-20.mp4`.

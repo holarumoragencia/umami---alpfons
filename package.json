@@ -6,9 +6,11 @@
   "scripts": {
     "dev": "remotion studio",
     "render": "remotion render PreciosRestauracion out/precios-restauracion.mp4",
+    "render:capacidad": "remotion render Capacidad20 out/umami-capacidad-20.mp4 --codec=h264 --crf=18",
     "still": "remotion still PreciosRestauracion out/poster.png --frame=100"
   },
   "dependencies": {
+    "@fontsource/manrope": "^5.2.8",
     "@remotion/cli": "4.0.534",
     "react": "19.2.0",
     "react-dom": "19.2.0",
