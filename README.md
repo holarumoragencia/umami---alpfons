@@ -38,3 +38,6 @@ Composición `Capacidad20` (`src/Capacidad.tsx`): 1080×1350 (4:5), 30 fps, 33,6
 
 - Clips recortados a 4:5 en `public/capacidad/clips/` (originales en `stock-raw/`).
 - Render: `npm run render:capacidad` → `out/umami-capacidad-20.mp4`.
+
+**Versión horizontal Full HD:** composición `Capacidad20Horizontal` (`src/CapacidadH.tsx`, 1920×1080), misma línea de tiempo y música;
+clips recortados para 16:9 en `public/capacidad/clips-h/`. Render: `npm run render:capacidad-h` → `out/umami-capacidad-20-horizontal.mp4`.

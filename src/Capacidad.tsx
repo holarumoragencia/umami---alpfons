@@ -19,7 +19,7 @@ export const CAP_FPS = 30;
 export const CAP_W = 1080;
 export const CAP_H = 1350;
 
-const C = {
+export const C = {
   naranja: "#F99F1A",
   gris: "#2A2A2A",
   blanco: "#FFFFFF",
@@ -27,8 +27,8 @@ const C = {
   arena: "#E9DFC9",
   linea: "#4a4a4a",
 };
-const FONT = "Manrope, Arial, sans-serif";
-const A = (p: string) => staticFile(`capacidad/${p}`);
+export const FONT = "Manrope, Arial, sans-serif";
+export const A = (p: string) => staticFile(`capacidad/${p}`);
 
 // Manrope local (sin depender de Google Fonts en el render)
 if (typeof window !== "undefined" && "FontFace" in window) {
@@ -49,7 +49,7 @@ if (typeof window !== "undefined" && "FontFace" in window) {
 
 /* ───────────── Línea de tiempo (frames a 30 fps; música a 150 BPM = 12 f/pulso) ───────────── */
 
-const T = {
+export const T = {
   intro: [0, 84], // Si mañana vendieras un 20 % más…
   atender: [84, 144], // …¿podrías atenderlo bien?
   mesas: [144, 228], // Mesas libres hay.
@@ -63,14 +63,14 @@ const T = {
 export const CAP_DURATION = 1008;
 
 const EASE = Easing.bezier(0.16, 1, 0.3, 1);
-const ease = (f: number, start: number, dur: number) =>
+export const ease = (f: number, start: number, dur: number) =>
   interpolate(f, [start, start + dur], [0, 1], {
     easing: EASE,
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
 
-const STAGES = ["Producción", "Pase", "Sala", "Lavado", "Cobro"];
+export const STAGES = ["Producción", "Pase", "Sala", "Lavado", "Cobro"];
 
 /* ───────────── Piezas ───────────── */
 
@@ -103,7 +103,7 @@ const Clip: React.FC<{
 };
 
 // Bloque de color con texto, que entra con barrido (estilo Amazon)
-const Block: React.FC<{
+export const Block: React.FC<{
   text: string;
   delay: number;
   bg: string;
@@ -145,7 +145,7 @@ const Block: React.FC<{
 };
 
 // Texto que sube desde una máscara, por línea
-const Line: React.FC<{
+export const Line: React.FC<{
   text: string;
   delay: number;
   size: number;
@@ -199,7 +199,7 @@ const PX0 = 140;
 const PSTEP = 200;
 const nodeX = (i: number) => PX0 + i * PSTEP;
 
-type NodeState = "off" | "ok" | "hot";
+export type NodeState = "off" | "ok" | "hot";
 
 const Pipeline: React.FC<{
   y: number;
